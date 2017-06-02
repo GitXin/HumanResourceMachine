@@ -1,0 +1,10 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+a:
+    INBOX
+    OUTBOX
+    JUMP     a
+
+
+-- Size Challenge 3/3 --
+-- Speed Challenge 30/25 --
