@@ -1,0 +1,25 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+    JUMP     f
+a:
+b:
+    COPYFROM 4
+    JUMP     e
+c:
+d:
+    COPYFROM 5
+e:
+    OUTBOX
+f:
+    INBOX
+    JUMPN    g
+    INBOX
+    JUMPN    d
+    JUMP     b
+g:
+    INBOX
+    JUMPN    a
+    JUMP     c
+
+-- Size Challenge 13/12 --
+-- Speed Challenge 28/28 --
