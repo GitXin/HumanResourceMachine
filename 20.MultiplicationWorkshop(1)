@@ -1,0 +1,47 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+    JUMP     c
+a:
+    INBOX
+    COPYFROM 9
+b:
+    OUTBOX
+c:
+d:
+    INBOX
+    JUMPZ    a
+    COPYTO   0
+    INBOX
+    JUMPZ    b
+    COPYTO   1
+    SUB      0
+    JUMPN    e
+    COPYFROM 1
+    COPYTO   2
+    JUMP     f
+e:
+    COPYFROM 0
+    COPYTO   2
+    COPYFROM 1
+    COPYTO   0
+    COPYFROM 2
+    COPYTO   1
+f:
+g:
+    BUMPDN   0
+    JUMPZ    h
+    COPYFROM 2
+    ADD      1
+    COPYTO   2
+    JUMP     g
+h:
+    COPYFROM 2
+    OUTBOX
+    JUMP     d
+
+-- Size Challenge 30/15 --
+-- Speed Challenge 108/109 --
+
+-- Floor 0: smaller, loop variable --
+-- Floor 1: bigger --
+-- Floor 2: the sum of bigger number --

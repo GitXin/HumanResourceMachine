@@ -1,0 +1,28 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+a:
+    INBOX
+    COPYTO   0
+    COPYTO   1
+    INBOX
+    COPYTO   2
+    JUMPZ    d
+b:
+    BUMPDN   2
+    JUMPZ    c
+    COPYFROM 0
+    ADD      1
+    COPYTO   0
+    JUMP     b
+c:
+    COPYFROM 0
+d:
+    OUTBOX
+    JUMP     a
+
+-- Size Challenge 15/15 --
+-- Speed Challenge 140/109 --
+
+-- Floor 0: the sum of the first number --
+-- Floor 1: the first number --
+-- Floor 2: the second number --
